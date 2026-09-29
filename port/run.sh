@@ -50,7 +50,7 @@ case "$GAME" in
     exec env DOTNET_ROLL_FORWARD=Major "$MODDIR/launch-game.sh" Graphics.Renderer=OpenGL Graphics.Mode=Windowed Graphics.WindowedSize=1280,800 ;;
   yuri)
     MODDIR="openra-yr"
-    [ -d "$MODDIR" ] || { echo "YR mod not found. Run: git clone https://github.com/cookgreen/Yuris-Revenge.git $MODDIR && cd $MODDIR && make"; exit 1; }
+    [ -d "$MODDIR" ] || { echo "YR mod not found. Run: git clone git@github.com:klab-mao/Yuris-Revenge.git $MODDIR && cd $MODDIR && make"; exit 1; }
     [ -f "$MODDIR/engine/OpenRA.Game.exe" ] || { echo "YR mod not built. Run: cd $MODDIR && make"; exit 1; }
     setup_openra_content "$MODDIR"
     if [ ! -d "$MODDIR/engine/Support/Content/yr" ]; then
